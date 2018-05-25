@@ -1,4 +1,4 @@
-﻿ff<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="homepage.master.cs" Inherits="Online_Shopping.homepage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="homepage.master.cs" Inherits="Online_Shopping.homepage" %>
 
 <!DOCTYPE html>
 
