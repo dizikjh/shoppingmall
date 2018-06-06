@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="homepage.master.cs" Inherits="Online_Shopping.homepage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>shoppingmall</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--added css -->
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <style>
+        .carousel-inner img {
+            -webkit-filter: grayscale(90%);
+            filter: grayscale(90%); /* make all photos black and white */
+            width: 100%; /* Set width to 100% */
+            margin: auto;
+        }
+
+        .carousel-caption h3 {
+            color: #fff !important;
+        }
+
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+            }
+        }
+
+        .container {
+            padding: 80px 120px;
+        }
+
+        .person {
+            border: 10px solid transparent;
+            margin-bottom: 25px;
+            width: 80%;
+            height: 80%;
+            opacity: 0.7;
+        }
+
+            .person:hover {
+                border-color: #f1f1f1;
+            }
+
+
+
+        .bg-1 {
+            background: #2d2d30;
+            color: #bdbdbd;
+        }
+
+            .bg-1 h3 {
+                color: #fff;
+            }
+
+            .bg-1 p {
+                font-style: italic;
+            }
+
+            /* Remove rounded borders from list */
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Remove border and add padding to thumbnails */
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail p {
+    margin-top: 15px;
+    color: #555;
+}
+
+/* Black buttons with extra padding and without rounded borders */
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+/* On hover, the color of .btn will transition to white with black text */
+.btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Online_Shoppoing</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="MainPage.aspx">Home</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Man wears <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Products_Man.aspx">Man 1-1</a></li>
+                            <li><a href="Products_Man.aspx">Man 1-2</a></li>
+                            <li><a href="Products_Man.aspx">Man 1-3</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Woman wears<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Products_Woman.aspx">Woman 1-1</a></li>
+                            <li><a href="Products_Woman.aspx">Woman 1-2</a></li>
+                            <li><a href="Products_Woman.aspx">Woman 1-3</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Baby wears<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Products_Baby.aspx">Baby 1-1</a></li>
+                            <li><a href="Products_Baby.aspx">Baby 1-2</a></li>
+                            <li><a href="Products_Baby.aspx">Baby 1-3</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="Signup.aspx"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                </ul>
+
+                <nav class="navbar-form navbar-right">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+
+
+            </div>
+        </nav>
+
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
